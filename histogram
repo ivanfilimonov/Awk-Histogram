@@ -1,0 +1,39 @@
+{Limit = 200}
+{
+ diff = $1/10
+ if(diff < 1) { Var1++; Asterisk1 = Asterisk1 "*" }
+ else if(diff < 2) { Var2++; Asterisk2 = Asterisk2 "*" }
+ else if(diff < 3) { Var3++; Asterisk3 = Asterisk3 "*" }
+ else if(diff < 4) { Var4++; Asterisk4 = Asterisk4 "*" }
+ else if(diff < 5) { Var5++; Asterisk5 = Asterisk5 "*" }
+ else if(diff < 6) { Var6++; Asterisk6 = Asterisk6 "*" }
+ else if(diff < 7) { Var7++; Asterisk7 = Asterisk7 "*" }
+ else if(diff < 8) { Var8++; Asterisk8 = Asterisk8 "*" }
+ else if(diff < 9) { Var9++; Asterisk9 = Asterisk9 "*" }
+ else if(diff < 10) { Var10++; Asterisk10 = Asterisk10 "*"}
+ else if(diff == 10) { Var11++; Asterisk11 = Asterisk11 "*"}
+}
+END{
+printf("%9s%d\t%s\n", "0 - 9: ", Var1, Asterisk1)
+printf("%9s%d\t%s\n", "10 - 19: ", Var2, Asterisk2)
+printf("%9s%d\t%s\n", "20 - 29: ", Var3, Asterisk3)
+printf("%9s%d\t%s\n", "30 - 39: ", Var4, Asterisk4)
+printf("%9s%d\t%s\n", "40 - 49: ", Var5, Asterisk5)
+printf("%9s%d\t%s\n", "50 - 59: ", Var6, Asterisk6)
+printf("%9s%d\t%s\n", "60 - 69: ", Var7, Asterisk7)
+printf("%9s%d\t%s\n", "70 - 79: ", Var8, Asterisk8)
+printf("%9s%d\t%s\n", "80 - 89: ", Var9, Asterisk9)
+printf("%9s%d\t%s\n", "90 - 99: ", Var10, Asterisk10)
+printf("%9s%d\t%s\n\n", "100: ", Var11, Asterisk11)
+printf("%9s%4.2f%s\n", "0 - 9: ", Var1/Limit*100, "%")
+printf("%9s%4.2f%s\n", "10 - 19: ", Var2/Limit*100, "%")
+printf("%9s%4.2f%s\n", "20 - 29: ", Var3/Limit*100, "%")
+printf("%9s%4.2f%s\n", "30 - 39: ", Var4/Limit*100, "%")
+printf("%9s%4.2f%s\n", "40 - 49: ", Var5/Limit*100, "%")
+printf("%9s%4.2f%s\n", "50 - 59: ", Var6/Limit*100, "%")
+printf("%9s%4.2f%s\n", "60 - 69: ", Var7/Limit*100, "%")
+printf("%9s%4.2f%s\n", "70 - 79: ", Var8/Limit*100, "%")
+printf("%9s%4.2f%s\n", "80 - 89: ", Var9/Limit*100, "%")
+printf("%9s%4.2f%s\n", "90 - 99: ", Var10/Limit*100, "%")
+printf("%9s%4.2f%s\n", "100: ", Var11/Limit*100, "%")
+}
